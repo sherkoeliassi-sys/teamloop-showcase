@@ -1,0 +1,23 @@
+{
+  "_sanitized": "Structure, field names, verdict, class and counts are real (run A, round 1). Identifiers are shortened to 8 characters. All free text and the fix text are rewritten; the original describes a private codebase.",
+  "role": "review_a",
+  "review_kind": "CODE",
+  "review_phase": "INITIAL",
+  "round": 1,
+  "row_id": "K117",
+  "subject_id": "18feb178",
+  "review_set_id": "72a6b808",
+  "verdict": "NOT_PASS",
+  "effective_verdict": "NOT_PASS",
+  "verification_status": "VERIFIED",
+  "blockers": [
+    {
+      "klass": "failure-record",
+      "text": "The guard raises, but its message omits three of the four fields the contract requires, and the new tests assert that incomplete message. Because the tests match the wrong text, they are green while the behaviour differs from the contract.",
+      "proof": "<diff lines of the raise and of the weak assertion> + <contract lines that state the required message> + <manifest entry showing the GREEN run exited 0>",
+      "fix": "<exact replacement text for the function, the one comment and the test file, as the reviewer wrote it; copied unchanged into the fix request>"
+    }
+  ],
+  "unresolved_proof_refs": [],
+  "notes": "<one paragraph: which rules were opened, the class judgement and why it holds, the attack that was tried, which receipts were reused, which named residual was left non-blocking>"
+}

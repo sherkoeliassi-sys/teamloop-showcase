@@ -1,0 +1,13 @@
+{
+  "_sanitized": "Structure and values are real for run A, except that identifiers are shortened to 8 characters and the target branch name is replaced by a placeholder.",
+  "schema_version": 1,
+  "row_id": "K117",
+  "contract_id": "5564e2a6",
+  "candidate_id": "18feb178",
+  "review_set_id": "72a6b808",
+  "code_sha": "61c8bcf4",
+  "closure_sha": "0734069d",
+  "anchor": "[AUDIT_ANCHOR_OK]",
+  "anchor_baseline": "[AUDIT_ANCHOR_OK]",
+  "target_ref": "refs/heads/<loop-branch>"
+}

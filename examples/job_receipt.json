@@ -1,0 +1,14 @@
+{
+  "_sanitized": "Values are the real ones for the round-1 review job of run A. The command line, working directory, recorded environment and output paths are removed. Hashes are shortened to 8 characters.",
+  "job_id": "CODE-review_a-r1-INITIAL",
+  "attempt_id": "att-1",
+  "schema_version": 1,
+  "started": "2026-10-30T18:47:20+00:00",
+  "ended": "2026-10-30T19:03:08+00:00",
+  "duration_s": 947.943,
+  "exit_code": 0,
+  "outcome": "COMPLETED",
+  "timed_out": false,
+  "stdout_sha256": "<8 hex>",
+  "stderr_sha256": "<8 hex>"
+}

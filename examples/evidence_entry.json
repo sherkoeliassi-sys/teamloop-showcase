@@ -1,0 +1,30 @@
+{
+  "_sanitized": "Two entries from the round-2 evidence manifest of run A. Outcomes, exit codes, targets and classifications are real; argv, working directory, file names and test ids are removed; hashes are shortened.",
+  "candidate_id": "18feb178",
+  "commands": [
+    {
+      "id": "red_guard",
+      "target": "baseline",
+      "expect": "RED",
+      "classified": "RED_OBSERVED",
+      "exit": 1,
+      "outcome": "COMPLETED",
+      "ok": true,
+      "summary": "8 failed, 1 deselected",
+      "stdout_sha256": "<8 hex>",
+      "stderr_sha256": "<8 hex>"
+    },
+    {
+      "id": "green",
+      "target": "candidate",
+      "expect": "GREEN",
+      "classified": "GREEN_OBSERVED",
+      "exit": 0,
+      "outcome": "COMPLETED",
+      "ok": true,
+      "summary": "9 passed",
+      "stdout_sha256": "<8 hex>",
+      "stderr_sha256": "<8 hex>"
+    }
+  ]
+}

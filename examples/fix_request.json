@@ -1,0 +1,14 @@
+{
+  "_sanitized": "Structure is real (run A, round 2). The machine builds this file from the previous round's verdict and copies each blocker's fix text unchanged; here that text is replaced by a placeholder.",
+  "schema_version": 1,
+  "from_round": 1,
+  "round": 2,
+  "blockers": [
+    {
+      "klass": "failure-record",
+      "text": "<same text as in the verdict>",
+      "proof": "<same proof as in the verdict>",
+      "fix": "<identical to the verdict's fix text. In runs A and C this identity was checked: the fix in the fix request equals the fix in the round-1 verdict>"
+    }
+  ]
+}

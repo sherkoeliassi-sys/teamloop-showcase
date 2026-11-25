@@ -1,0 +1,187 @@
+[
+ {
+  "run": "A",
+  "sandbox_clone": 5,
+  "audit_row": "K117",
+  "date_utc": "2026-10-30",
+  "reviewer_role": "review_a",
+  "rounds": [
+   {
+    "round": 1,
+    "verdict": "NOT_PASS",
+    "blockers": 1,
+    "blocker_classes": [
+     "failure-record"
+    ],
+    "verification_status": "VERIFIED"
+   },
+   {
+    "round": 2,
+    "verdict": "PASS",
+    "blockers": 0,
+    "blocker_classes": [],
+    "verification_status": "VERIFIED"
+   }
+  ],
+  "agent_jobs": {
+   "builder": {
+    "jobs": 2,
+    "seconds": 276.4
+   },
+   "reviewer": {
+    "jobs": 2,
+    "seconds": 1407.7
+   },
+   "verify": {
+    "jobs": 10,
+    "seconds": 55.9
+   },
+   "planner": {
+    "jobs": 1,
+    "seconds": 430.7
+   }
+  },
+  "wall_clock_minutes": 50.2,
+  "final_round_mutation_probes": {
+   "total": 0,
+   "killed_nonzero_exit": 0
+  },
+  "reviewed_bytes_equal_committed_bytes": true,
+  "manifest_files_checked": 3,
+  "reviewed_subject_equals_candidate": true,
+  "closure_candidate_equals_candidate": true,
+  "anchor_check": "[AUDIT_ANCHOR_OK]",
+  "code_commit": "61c8bcf4",
+  "closure_commit": "0734069d",
+  "target_ref": "refs/heads/<loop-branch>",
+  "code_commit_parent": "d8fb7b64",
+  "receipts_available": true
+ },
+ {
+  "run": "B",
+  "sandbox_clone": 13,
+  "audit_row": "K117",
+  "date_utc": "2026-11-02",
+  "reviewer_role": "review_a",
+  "rounds": [
+   {
+    "round": 1,
+    "verdict": "PASS",
+    "blockers": 0,
+    "blocker_classes": [],
+    "verification_status": "VERIFIED"
+   }
+  ],
+  "agent_jobs": {
+   "builder": {
+    "jobs": 1,
+    "seconds": 292.8
+   },
+   "reviewer": {
+    "jobs": 1,
+    "seconds": 639.2
+   },
+   "mutation_probe": {
+    "jobs": 5,
+    "seconds": 57.8
+   },
+   "verify": {
+    "jobs": 3,
+    "seconds": 43.5
+   },
+   "planner": {
+    "jobs": 1,
+    "seconds": 567.6
+   }
+  },
+  "wall_clock_minutes": 87.9,
+  "final_round_mutation_probes": {
+   "total": 4,
+   "killed_nonzero_exit": 4
+  },
+  "reviewed_bytes_equal_committed_bytes": true,
+  "manifest_files_checked": 4,
+  "reviewed_subject_equals_candidate": true,
+  "closure_candidate_equals_candidate": true,
+  "anchor_check": "[AUDIT_ANCHOR_OK]",
+  "code_commit": "49ac94ba",
+  "closure_commit": "693a3a63",
+  "target_ref": "refs/heads/<loop-branch>",
+  "code_commit_parent": "44f37375",
+  "receipts_available": true
+ },
+ {
+  "run": "C",
+  "sandbox_clone": 13,
+  "audit_row": "K97",
+  "date_utc": "2026-11-03",
+  "reviewer_role": "review_codex",
+  "rounds": [
+   {
+    "round": 1,
+    "verdict": "NOT_PASS",
+    "blockers": 1,
+    "blocker_classes": [
+     "CONTRACT_TEST_COVERAGE"
+    ],
+    "verification_status": "MISSING"
+   },
+   {
+    "round": 2,
+    "verdict": "PASS",
+    "blockers": 0,
+    "blocker_classes": [],
+    "verification_status": "VERIFIED"
+   }
+  ],
+  "agent_jobs": {
+   "builder": {
+    "jobs": 2,
+    "seconds": 358.9
+   },
+   "reviewer": {
+    "jobs": 2,
+    "seconds": 486.8
+   },
+   "mutation_probe": {
+    "jobs": 12,
+    "seconds": 97.6
+   },
+   "verify": {
+    "jobs": 8,
+    "seconds": 68.4
+   },
+   "planner": {
+    "jobs": 1,
+    "seconds": 419.7
+   }
+  },
+  "wall_clock_minutes": 148.6,
+  "final_round_mutation_probes": {
+   "total": 5,
+   "killed_nonzero_exit": 5
+  },
+  "reviewed_bytes_equal_committed_bytes": true,
+  "manifest_files_checked": 2,
+  "reviewed_subject_equals_candidate": true,
+  "closure_candidate_equals_candidate": true,
+  "anchor_check": "[AUDIT_ANCHOR_OK]",
+  "code_commit": "2da78ad6",
+  "closure_commit": "fa49f2f0",
+  "target_ref": "refs/heads/<loop-branch>",
+  "code_commit_parent": "693a3a63",
+  "receipts_available": true
+ },
+ {
+  "run": "D",
+  "sandbox_clone": 7,
+  "audit_row": "K117",
+  "date_utc": "unknown (commit dates are pinned to base+1s by the publisher; receipts no longer on disk)",
+  "receipts_available": false,
+  "what_exists": "two commits authored by the loop identity (code, then closure), both carrying the same contract/candidate/operation ids; the code commit changes 3 files, the closure commit changes 1 file, the audit register (the closing row open -> closed, plus anchor re-stamps; 38 rows in all)",
+  "what_is_missing": "control root with reviewer verdicts, job receipts and candidate manifest; byte-equality and reviewer verdict for this run cannot be re-checked",
+  "code_commit": "2d32aafc",
+  "closure_commit": "1c6c70d2",
+  "code_commit_parent": "ce31ce74"
+ }
+]
