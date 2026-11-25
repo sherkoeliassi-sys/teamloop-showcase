@@ -7,6 +7,7 @@ codebase is or does.
 |---|---|---|
 | Orchestrator | Claude Code (desktop app) | The main session: classifies, opens chains, relays briefs, stamps receipts. Writes no code. |
 | Agent seats | Claude, Codex CLI, Cursor agent CLI, and Gemini through the Antigravity CLI | Preparer, builder, reviewer and decider seats are filled from these. The same model in two different harnesses counts as two different colleagues, and a test result belongs to the pair of model and harness. |
+| Driver | A Python queue driver | Takes the place of the orchestrator in the autonomous loop: selects the next row, runs the loop's post command, writes a receipt line and one log commit, notifies, and stops on errors. |
 | Memory | An MCP memory server | Holds the startup text, the live status, the frozen digests and the decision records that a session reads at its start. |
 | Hooks | Python scripts on tool calls and on the end of a turn | Refuse a start without a registered chain, refuse risky shell forms, refuse a commit that breaks a rule, and ask at turn end which command could have failed. |
 | Version control | git, with commit hooks, private worktrees and deterministic publication | Two commits per closure with pinned environment and date; a compare-and-swap ref update; recovery. |
@@ -16,7 +17,7 @@ codebase is or does.
 
 ## Where each one meets the method
 
-* The **orchestrator** and the **seats** meet in the chain: the orchestrator starts a role, the role's output
+* The **orchestrator** (or, in the autonomous loop, the driver) and the **seats** meet in the chain: the orchestrator starts a role, the role's output
   comes back as a receipt, and nothing in a brief is rewritten on the way.
 * The **memory server** is read at the start of a session and written at its end. It is how the next session
   knows what is open and where each open item lives ([08-how-the-method-improves.md](08-how-the-method-improves.md)).

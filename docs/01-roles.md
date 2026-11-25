@@ -14,8 +14,11 @@ seeing the author's reasoning, and the orchestrator writes no code.
 
 ## Around them
 
-* **Orchestrator** (the main AI session that I direct): classifies the change, starts the chain, relays and
-  stamps. The orchestrator selects or rewrites nothing in a brief it relays, and writes no code.
+* **Orchestrator** (the main AI session that I direct): in a manual chain it classifies the change, starts the
+  chain, relays and stamps. It selects or rewrites nothing in a brief it relays, and writes no code.
+* **Driver** (in the autonomous loop, instead of the orchestrator): a program that takes the next row from the
+  queue, runs the loop's command for it, records a receipt line and notifies. It decides nothing about a row's
+  content, and it stops on an error, a stop marker, a silent post or a failed commit.
 * **Deciders**: when a decision is uncertain it goes to two independent models. A disagreement is settled by a
   run if a run can settle it; otherwise by further rounds on the conditions that still differ, until they agree.
   It never ends as "both positions recorded" and never as a question to the human.

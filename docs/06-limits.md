@@ -23,7 +23,9 @@ harder rows.
 
 ## 3. "On its own" has a precise meaning
 
-People chose the rows, started each run, wrote the rules the loop followed, and read the outcome afterwards.
+People chose the rows or the queue, started the run or the driver, wrote the rules the loop followed, and read
+the outcome afterwards. I have not checked whether each of the four runs was started by the driver or by a
+direct run command.
 Within a run, the cycle plan, build, verify, review, correct, publish was done by the loop, and I checked that
 no byte changed between the final PASS and the commit. I did not and could not show that no human ever looked at
 a run while it was going. Since 25 November 2026 a standing order says nobody touches any chain while the loop

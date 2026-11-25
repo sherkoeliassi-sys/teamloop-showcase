@@ -6,7 +6,7 @@ structured exchange between two independent models. This page follows both from 
 
 ## 1. Classify before anything starts
 
-The orchestrator (the main AI session I direct) reads the change and picks a risk class, K0a to K3
+In a manual chain the orchestrator (the main AI session I direct) reads the change and picks a risk class, K0a to K3
 ([01-roles.md](01-roles.md)). The class decides which steps below run. A record fix has no agents at all; a
 guarded-code change gets a reviewer with an attack task; an architecture change gets a reviewed contract first.
 Doubt never raises the class. Only the orchestrator's decision moves it, and a real doubt goes to the deciders
@@ -85,12 +85,18 @@ chain with its timings.
 
 ### Where the loop's work ends
 
-When the loop takes on a row, it runs the whole chain above without help: from planning to an approved,
-published candidate. That candidate is the output: a code commit and a closure commit that closes the audit row,
-made on the loop's own branch after a PASS on exactly those bytes. The loop does not merge into the main line.
-Merging a published candidate is a separate step, taken by the orchestrator.
+In a manual chain the orchestrator starts each role. In the loop a **driver** takes its place: a small program
+that picks the next row from the queue, runs the loop's own command for that row, writes one receipt line and
+one commit of the run log, and sends a notification. The driver decides nothing about a row's content. It stops,
+and does not go on to the next row, when a post exits with an error, prints a stop marker, goes silent past its
+time limit (the driver then kills that post's process tree), or when its own commit fails.
 
-The loop is autonomous and I am not involved while it runs. By my standing order (25 November 2026,
+Inside a row the loop runs the whole chain above without help: from planning to an approved, published
+candidate. That candidate is the output: a code commit and a closure commit that closes the audit row, made on
+the loop's own branch after a PASS on exactly those bytes. Neither the loop nor the driver merges into the main
+line. Merging a published candidate is a separate step, taken by the orchestrator.
+
+The loop, with its driver, is autonomous and I am not involved while it runs. By my standing order (25 November 2026,
 [07-my-role-and-decisions.md](07-my-role-and-decisions.md)) nobody touches any chain while the loop is working on
 rows. The loop is frozen at the moment, so that order has not yet
 been exercised; the four recorded closures in [05-evidence-four-closures.md](05-evidence-four-closures.md) were
