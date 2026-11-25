@@ -42,6 +42,24 @@ flowchart TD
     A2 -- yes --> R2
 ```
 
+The driver of the autonomous loop, which takes the orchestrator's place:
+
+```mermaid
+flowchart TD
+    S[Select the next row from the queue] --> E{Queue empty?}
+    E -- yes --> Z[Driver ends, exit 0]
+    E -- no --> W{A worker's job still running?}
+    W -- yes --> WAIT[Wait, never kill]
+    WAIT --> W
+    W -- no --> P[Run the row: plan, build, check, review, correct, publish]
+    P --> C{Error, stop marker, or silent past the time limit?}
+    C -- yes --> K[Stop; a silent post has its process tree killed]
+    C -- no --> RC[Write a receipt line and commit the run log]
+    RC --> N[Send a notification]
+    N --> S
+    RC -- commit fails --> K
+```
+
 ## 2. The building chain
 
 ```

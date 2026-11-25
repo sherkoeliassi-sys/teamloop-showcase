@@ -36,10 +36,16 @@ BUILDING   classify -> preparer (contract) -> builder -> checker (RED on old, GR
 DECIDING   a question no builder may answer -> two independent models answer alone
                     -> a run settles what a run can settle -> otherwise rounds until they agree
                     -> the orchestrator relays, settles nothing, and checks the answer against the owner's wishes
+
+AUTONOMOUS a driver takes the orchestrator's place: select the next row from the queue
+LOOP       -> run the row (plan, build, check, review, correct, publish a candidate on the loop's own branch)
+           -> write a receipt line, commit the run log, send a notification -> next row
+           stops on an error, a stop marker, a silent post or a failed commit; it merges nothing
 ```
 
 Every step leaves a receipt, gates refuse to continue when a rule is broken, and the owner keeps only the few
-acts no agent may perform.
+acts no agent may perform. The driver decides nothing about a row's content, and while the loop works on rows
+nobody touches any chain.
 
 ## What is demonstrated
 
