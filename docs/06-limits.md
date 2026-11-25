@@ -57,7 +57,11 @@ is how it worked and how the manual chains work now, not a running automatic ser
 ## 8. The orchestrator still makes mistakes
 
 [02-gates.md](02-gates.md) lists 19 logged orchestrator mistakes in one three-hour session. Hooks caught seven,
-the orchestrator itself six, the human four, one came from an agent's own reply, and one is unresolved. The gates
+the orchestrator itself six, the human four, one came from an agent's own reply, and one is unresolved. This is
+why the gates exist. Hooks stopped 7 of the 19 and the orchestrator's own checks caught 6 more, so 13 of the 19
+were caught without a human (14 counting the agent's breach, which was seen in the agent's own reply). Four
+reached the human before anyone caught them and one is unresolved. Hooks alone did not catch a majority; the
+claim here is that most were caught by the system itself, and that the ones it missed are listed. The gates
 reduce the cost of this class of error; they do not remove it.
 
 ## 9. Process checks are not proof of correctness

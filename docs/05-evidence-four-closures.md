@@ -78,6 +78,11 @@ round-1 candidate that was rejected is not the one that was committed.
 | C | 1 | `ce020a02` | 2 | NOT_PASS | no |
 | C | 2 | `8ad6104e` | 2 | PASS | yes |
 
+A note on the field `verification_status` in `runs.json`: it is the reviewer's statement of whether it
+reproduced the proof itself. A PASS requires `VERIFIED`. A NOT_PASS may carry either value; run C's rejected
+round carries `MISSING`, run A's carries `VERIFIED`. `MISSING` on a rejection is not a defect: the verdict stands
+on its blocker, and the machine's own rule marks a rejection that is not a full verification as `MISSING`.
+
 In runs A and C every file's hash differs between the two rounds, so the PASS cannot rest on the bytes that were
 rejected. In each run the committed candidate is the last round's candidate: the closure record carries its
 identity, and the code commit contains exactly its files. The data is in `evidence/runs.json`
