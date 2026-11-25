@@ -13,14 +13,104 @@
     "blocker_classes": [
      "failure-record"
     ],
-    "verification_status": "VERIFIED"
+    "verification_status": "VERIFIED",
+    "candidate_id": "4bd49ea4",
+    "candidate_files": 3,
+    "file_hashes": [
+     "79bff044",
+     "79f46319",
+     "e64449a7"
+    ],
+    "verdict_subject_id": "4bd49ea4",
+    "verify_jobs": [
+     {
+      "kind": "green",
+      "target": "candidate",
+      "exit_code": 0,
+      "summary": "3 passed",
+      "seconds": 5.237
+     },
+     {
+      "kind": "red",
+      "target": "baseline",
+      "exit_code": 1,
+      "summary": "2 failed, 1 deselected",
+      "seconds": 13.814
+     },
+     {
+      "kind": "red",
+      "target": "baseline",
+      "exit_code": 1,
+      "summary": "1 failed",
+      "seconds": 6.748
+     },
+     {
+      "kind": "regress",
+      "target": "baseline",
+      "exit_code": 0,
+      "summary": "2 passed",
+      "seconds": 2.785
+     },
+     {
+      "kind": "regress",
+      "target": "candidate",
+      "exit_code": 0,
+      "summary": "2 passed",
+      "seconds": 2.798
+     }
+    ]
    },
    {
     "round": 2,
     "verdict": "PASS",
     "blockers": 0,
     "blocker_classes": [],
-    "verification_status": "VERIFIED"
+    "verification_status": "VERIFIED",
+    "candidate_id": "18feb178",
+    "candidate_files": 3,
+    "file_hashes": [
+     "1d42a46e",
+     "74f81f06",
+     "d8e24db7"
+    ],
+    "verdict_subject_id": "18feb178",
+    "verify_jobs": [
+     {
+      "kind": "green",
+      "target": "candidate",
+      "exit_code": 0,
+      "summary": "9 passed",
+      "seconds": 5.474
+     },
+     {
+      "kind": "red",
+      "target": "baseline",
+      "exit_code": 1,
+      "summary": "8 failed, 1 deselected",
+      "seconds": 6.828
+     },
+     {
+      "kind": "red",
+      "target": "baseline",
+      "exit_code": 1,
+      "summary": "1 failed",
+      "seconds": 6.723
+     },
+     {
+      "kind": "regress",
+      "target": "baseline",
+      "exit_code": 0,
+      "summary": "2 passed",
+      "seconds": 2.766
+     },
+     {
+      "kind": "regress",
+      "target": "candidate",
+      "exit_code": 0,
+      "summary": "2 passed",
+      "seconds": 2.755
+     }
+    ]
    }
   ],
   "agent_jobs": {
@@ -55,7 +145,49 @@
   "closure_commit": "0734069d",
   "target_ref": "refs/heads/<loop-branch>",
   "code_commit_parent": "d8fb7b64",
-  "receipts_available": true
+  "receipts_available": true,
+  "agent_jobs_timeline": [
+   {
+    "role": "planner",
+    "round": 0,
+    "started": "2026-10-30T18:31:56",
+    "ended": "2026-10-30T18:39:07",
+    "duration_s": 430.691,
+    "exit_code": 0
+   },
+   {
+    "role": "builder",
+    "round": 1,
+    "started": "2026-10-30T18:40:35",
+    "ended": "2026-10-30T18:43:32",
+    "duration_s": 177.458,
+    "exit_code": 0
+   },
+   {
+    "role": "reviewer",
+    "round": 1,
+    "started": "2026-10-30T18:47:20",
+    "ended": "2026-10-30T19:03:08",
+    "duration_s": 947.943,
+    "exit_code": 0
+   },
+   {
+    "role": "builder",
+    "round": 2,
+    "started": "2026-10-30T19:09:07",
+    "ended": "2026-10-30T19:10:46",
+    "duration_s": 98.906,
+    "exit_code": 0
+   },
+   {
+    "role": "reviewer",
+    "round": 2,
+    "started": "2026-10-30T19:14:26",
+    "ended": "2026-10-30T19:22:06",
+    "duration_s": 459.732,
+    "exit_code": 0
+   }
+  ]
  },
  {
   "run": "B",
@@ -69,7 +201,39 @@
     "verdict": "PASS",
     "blockers": 0,
     "blocker_classes": [],
-    "verification_status": "VERIFIED"
+    "verification_status": "VERIFIED",
+    "candidate_id": "33be7d36",
+    "candidate_files": 4,
+    "file_hashes": [
+     "9b6699be",
+     "9d3ecb98",
+     "9db1fb3d",
+     "e755b81d"
+    ],
+    "verdict_subject_id": "33be7d36",
+    "verify_jobs": [
+     {
+      "kind": "green",
+      "target": "candidate",
+      "exit_code": 0,
+      "summary": "26 passed",
+      "seconds": 11.167
+     },
+     {
+      "kind": "red",
+      "target": "baseline",
+      "exit_code": 1,
+      "summary": "25 failed, 1 deselected",
+      "seconds": 24.195
+     },
+     {
+      "kind": "regress",
+      "target": "candidate",
+      "exit_code": 0,
+      "summary": "8 passed",
+      "seconds": 8.1
+     }
+    ]
    }
   ],
   "agent_jobs": {
@@ -108,7 +272,33 @@
   "closure_commit": "693a3a63",
   "target_ref": "refs/heads/<loop-branch>",
   "code_commit_parent": "44f37375",
-  "receipts_available": true
+  "receipts_available": true,
+  "agent_jobs_timeline": [
+   {
+    "role": "planner",
+    "round": 0,
+    "started": "2026-11-02T21:57:36",
+    "ended": "2026-11-02T22:07:04",
+    "duration_s": 567.634,
+    "exit_code": 0
+   },
+   {
+    "role": "builder",
+    "round": 1,
+    "started": "2026-11-02T22:10:40",
+    "ended": "2026-11-02T22:15:33",
+    "duration_s": 292.82,
+    "exit_code": 0
+   },
+   {
+    "role": "reviewer",
+    "round": 1,
+    "started": "2026-11-02T23:14:50",
+    "ended": "2026-11-02T23:25:29",
+    "duration_s": 639.16,
+    "exit_code": 0
+   }
+  ]
  },
  {
   "run": "C",
@@ -124,14 +314,88 @@
     "blocker_classes": [
      "CONTRACT_TEST_COVERAGE"
     ],
-    "verification_status": "MISSING"
+    "verification_status": "MISSING",
+    "candidate_id": "ce020a02",
+    "candidate_files": 2,
+    "file_hashes": [
+     "d119794d",
+     "f18ea115"
+    ],
+    "verdict_subject_id": "ce020a02",
+    "verify_jobs": [
+     {
+      "kind": "green",
+      "target": "candidate",
+      "exit_code": 0,
+      "summary": "5 passed",
+      "seconds": 6.949
+     },
+     {
+      "kind": "red",
+      "target": "baseline",
+      "exit_code": 1,
+      "summary": "1 failed",
+      "seconds": 9.163
+     },
+     {
+      "kind": "red",
+      "target": "baseline",
+      "exit_code": 1,
+      "summary": "1 failed",
+      "seconds": 10.047
+     },
+     {
+      "kind": "red",
+      "target": "baseline",
+      "exit_code": 1,
+      "summary": "1 failed",
+      "seconds": 9.286
+     }
+    ]
    },
    {
     "round": 2,
     "verdict": "PASS",
     "blockers": 0,
     "blocker_classes": [],
-    "verification_status": "VERIFIED"
+    "verification_status": "VERIFIED",
+    "candidate_id": "8ad6104e",
+    "candidate_files": 2,
+    "file_hashes": [
+     "138cec0e",
+     "692e4936"
+    ],
+    "verdict_subject_id": "8ad6104e",
+    "verify_jobs": [
+     {
+      "kind": "green",
+      "target": "candidate",
+      "exit_code": 0,
+      "summary": "5 passed",
+      "seconds": 7.503
+     },
+     {
+      "kind": "red",
+      "target": "baseline",
+      "exit_code": 1,
+      "summary": "1 failed",
+      "seconds": 8.026
+     },
+     {
+      "kind": "red",
+      "target": "baseline",
+      "exit_code": 1,
+      "summary": "1 failed",
+      "seconds": 9.527
+     },
+     {
+      "kind": "red",
+      "target": "baseline",
+      "exit_code": 1,
+      "summary": "1 failed",
+      "seconds": 7.912
+     }
+    ]
    }
   ],
   "agent_jobs": {
@@ -170,7 +434,49 @@
   "closure_commit": "fa49f2f0",
   "target_ref": "refs/heads/<loop-branch>",
   "code_commit_parent": "693a3a63",
-  "receipts_available": true
+  "receipts_available": true,
+  "agent_jobs_timeline": [
+   {
+    "role": "planner",
+    "round": 0,
+    "started": "2026-11-03T00:14:36",
+    "ended": "2026-11-03T00:21:36",
+    "duration_s": 419.698,
+    "exit_code": 0
+   },
+   {
+    "role": "builder",
+    "round": 1,
+    "started": "2026-11-03T00:24:27",
+    "ended": "2026-11-03T00:27:25",
+    "duration_s": 178.637,
+    "exit_code": 0
+   },
+   {
+    "role": "reviewer",
+    "round": 1,
+    "started": "2026-11-03T01:24:38",
+    "ended": "2026-11-03T01:28:31",
+    "duration_s": 232.995,
+    "exit_code": 0
+   },
+   {
+    "role": "builder",
+    "round": 2,
+    "started": "2026-11-03T01:38:40",
+    "ended": "2026-11-03T01:41:40",
+    "duration_s": 180.288,
+    "exit_code": 0
+   },
+   {
+    "role": "reviewer",
+    "round": 2,
+    "started": "2026-11-03T02:39:00",
+    "ended": "2026-11-03T02:43:13",
+    "duration_s": 253.817,
+    "exit_code": 0
+   }
+  ]
  },
  {
   "run": "D",

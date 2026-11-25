@@ -26,7 +26,8 @@ harder rows.
 People chose the rows, started each run, wrote the rules the loop followed, and read the outcome afterwards.
 Within a run, the cycle plan, build, verify, review, correct, publish was done by the loop, and I checked that
 no byte changed between the final PASS and the commit. I did not and could not show that no human ever looked at
-a run while it was going.
+a run while it was going. Since 25 November 2026 a standing order says nobody touches any chain while the loop
+works on rows; it came after these runs and has not been exercised, because the loop is frozen.
 
 ## 4. The reviewers' model identity is not in the artifacts I read
 

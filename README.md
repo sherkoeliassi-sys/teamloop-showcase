@@ -49,6 +49,9 @@ acts no agent may perform.
 | Four closures made by the loop itself | [docs/05-evidence-four-closures.md](docs/05-evidence-four-closures.md) and [evidence/runs.json](evidence/runs.json): audit rows K117 (three times) and K97 (once) were closed by the loop in sandbox clones. |
 | Sanitized receipts | [examples/](examples/): verdict, fix request, job receipt, evidence entry, closure record. |
 | What the evidence does *not* show | [docs/06-limits.md](docs/06-limits.md). Read this before drawing conclusions. |
+| My role and the decisions I made | [docs/07-my-role-and-decisions.md](docs/07-my-role-and-decisions.md): dated decisions, with the reason where one was written down. |
+| How the method improves | [docs/08-how-the-method-improves.md](docs/08-how-the-method-improves.md): digests, correction budget, gate ledger, reviewed rule changes. |
+| Stack and integrations | [docs/09-stack-and-integrations.md](docs/09-stack-and-integrations.md): the tooling of the method, not of the private codebase. |
 
 ## The four loop closures at a glance
 
@@ -94,6 +97,9 @@ docs/03-receipts.md            what a receipt contains and why
 docs/04-walkthrough-...md      NOT_PASS -> correction -> PASS, anonymized
 docs/05-evidence-four-...md    the four closures, how each number was obtained
 docs/06-limits.md              honest limits
+docs/07-my-role-and-...md      my role and my dated decisions
+docs/08-how-the-method-...md   how the method improves itself
+docs/09-stack-and-...md        stack and integrations of the method
 evidence/runs.json             machine-readable data behind the tables
 examples/                      sanitized receipt examples
 tools/check_repo.py            leak scan + consistency check of this repo

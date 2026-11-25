@@ -12,6 +12,36 @@ guarded-code change gets a reviewer with an attack task; an architecture change 
 Doubt never raises the class. Only the orchestrator's decision moves it, and a real doubt goes to the deciders
 (section 3).
 
+## The two routes as diagrams
+
+```mermaid
+flowchart TD
+    C[Orchestrator classifies the change] --> P[Preparer writes the contract]
+    P --> S[Size check flags excess in the brief]
+    S --> B[Builder implements the contract]
+    B --> K[Checker: RED on baseline, GREEN on candidate]
+    K --> R{Reviewer}
+    R -- PASS --> PUB[Publisher: code commit, then closure commit]
+    R -- "NOT_PASS: blocker + exact fix" --> B2[Builder applies the fix]
+    B2 --> K2[Checker runs the commands again]
+    K2 --> R2{Same reviewer rechecks}
+    R2 -- PASS --> PUB
+    R2 -- still NOT_PASS --> X[Stays NOT_PASS, never relabelled]
+```
+
+```mermaid
+flowchart TD
+    Q[Question no builder may answer] --> R1[Round 1: two independent models answer alone]
+    R1 --> A{Agree on every point?}
+    A -- yes --> D[Decision takes effect]
+    A -- no --> RUN{Can a run settle it?}
+    RUN -- yes --> D
+    RUN -- no --> R2[Round 2: joint conditions, second model accepts or changes only what it rejects]
+    R2 --> A2{Still differ?}
+    A2 -- no --> D
+    A2 -- yes --> R2
+```
+
 ## 2. The building chain
 
 ```
@@ -52,6 +82,19 @@ Rules that hold the chain together:
 
 [04-walkthrough-not-pass-to-pass.md](04-walkthrough-not-pass-to-pass.md) follows one real run through this
 chain with its timings.
+
+### Where the loop's work ends
+
+When the loop takes on a row, it runs the whole chain above without help: from planning to an approved,
+published candidate. That candidate is the output: a code commit and a closure commit that closes the audit row,
+made on the loop's own branch after a PASS on exactly those bytes. The loop does not merge into the main line.
+Merging a published candidate is a separate step, taken by the orchestrator.
+
+The loop is autonomous and I am not involved while it runs. By my standing order (25 November 2026,
+[07-my-role-and-decisions.md](07-my-role-and-decisions.md)) nobody touches any chain while the loop is working on
+rows. The loop is frozen at the moment, so that order has not yet
+been exercised; the four recorded closures in [05-evidence-four-closures.md](05-evidence-four-closures.md) were
+made before it.
 
 ## 3. The decision route
 

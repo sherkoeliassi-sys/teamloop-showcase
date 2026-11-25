@@ -65,6 +65,24 @@ For each run with receipts (A, B, C):
 | B | 26 passed (regression set: 8 passed) | 25 failed | 4 of 4 |
 | C | 5 passed | three RED commands, 1 failed each | 5 of 5 |
 
+## Candidate identity across rounds
+
+Every round builds a new candidate with its own identity, and every verdict names the candidate it judged. The
+round-1 candidate that was rejected is not the one that was committed.
+
+| Run | Round | Candidate id | Files in candidate | Verdict | Committed |
+|---|---|---|---|---|---|
+| A | 1 | `4bd49ea4` | 3 | NOT_PASS | no |
+| A | 2 | `18feb178` | 3 | PASS | yes |
+| B | 1 | `33be7d36` | 4 | PASS | yes |
+| C | 1 | `ce020a02` | 2 | NOT_PASS | no |
+| C | 2 | `8ad6104e` | 2 | PASS | yes |
+
+In runs A and C every file's hash differs between the two rounds, so the PASS cannot rest on the bytes that were
+rejected. In each run the committed candidate is the last round's candidate: the closure record carries its
+identity, and the code commit contains exactly its files. The data is in `evidence/runs.json`
+(`rounds[].candidate_id`, `rounds[].file_hashes`, `rounds[].verdict_subject_id`).
+
 ## What I could not check: run D
 
 For run D the control root with the receipts is no longer on disk. What remains is the pair of commits: both
